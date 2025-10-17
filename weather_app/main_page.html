@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Professional Weather App</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app" class="app loading">
+
+<header class="topbar">
+<div class="brand">
+<h1>Weatherly</h1>
+<p class="tag">Clean • Accurate • Beautiful</p>
+</div>
+
+<div class="controls">
+<div class="search">
+<input id="cityInput" placeholder="Search city (e.g. Mumbai)" />
+<button id="searchBtn" aria-label="Search">🔎</button>
+</div>
+<button id="refreshBtn" title="Refresh current location">⟳</button>
+</div>
+</header>
+
+<main class="main">
+<section class="current-card glass" id="currentCard">
+<div class="left">
+<div class="location" id="location">—</div>
+<div class="time" id="localTime">—</div>
+<div class="temp-row">
+<img id="weatherIcon" class="icon" alt="weather icon" />
+<div>
+<div class="temp" id="temperature">--°C</div>
+<div class="condition" id="condition">—</div>
+</div>
+</div>
+
+<div class="meta">
+            <span>Feels like: <b id="feels">—</b></span>
+            <span>Humidity: <b id="humidity">—</b></span>
+            <span>Wind: <b id="wind">—</b></span>
+</div>
+</div>
+
+<div class="right">
+<div class="minmax">
+<div>Min: <b id="tempMin">—</b></div>
+<div>Max: <b id="tempMax">—</b></div>
+</div>
+
+<div class="sun">
+<div>Sunrise: <b id="sunrise">—</b></div>
+<div>Sunset: <b id="sunset">—</b></div>
+<div class="sun-icon-container" id="sunIconContainer">
+</div>
+</div>
+
+<div class="coords">
+<small id="coords">lat: —, lon: —</small>
+</div>
+</div>
+</section>
+
+<section class="forecast glass" id="forecast">
+<h2>5-Day Forecast</h2>
+<div id="forecastCards" class="forecast-cards"></div>
+</section>
+</main>
+
+<section class="hourly-forecast glass" id="hourlyForecast">
+<h2>24hrs forecast</h2>
+<div class="hourly-cards-container">
+<div class="hourly-card">Time / Icon / Temp</div>
+<div class="hourly-card">Time / Icon / Temp</div>
+<div class="hourly-card">Time / Icon / Temp</div>
+<div class="hourly-card">Time / Icon / Temp</div>
+<div class="hourly-card">Time / Icon / Temp</div>
+<div class="hourly-card">Time / Icon / Temp</div>
+<div class="hourly-card">Time / Icon / Temp</div>
+
+</div>
+</section>
+
+<div id="message" class="message"></div>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
